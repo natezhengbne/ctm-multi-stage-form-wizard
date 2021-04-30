@@ -1,0 +1,8 @@
+{
+  "name": "@ctm-multi-stage-wizard/common",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
+}

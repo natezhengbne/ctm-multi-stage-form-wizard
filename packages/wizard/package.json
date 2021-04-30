@@ -1,0 +1,14 @@
+{
+  "name": "@ctm-multi-stage-wizard/wizard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@ctm-multi-stage-wizard/common": "1.0.0"
+  }
+}
