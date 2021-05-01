@@ -1,6 +1,7 @@
 import { Box, Button, Card, CardActions, CardContent, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import NavBar from "./navigation/nav-bar";
+import StepperDialog from "./stepper-dialog";
 
 export default function Main() {
   return (
@@ -12,7 +13,7 @@ export default function Main() {
             Multi Stage Form Wizard
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            There are three different wizard implemention.
+            There are three difference wizards implemention.
           </Typography>
         </Container>
       </Box>
@@ -25,14 +26,10 @@ export default function Main() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Stepper
                   </Typography>
-                  <Typography>
-                    It display progress through a sequence of logical and numbered on dialog.
-                  </Typography>
+                  <Typography>It display progress through a sequence of numbered.</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
+                  <StepperDialog />
                 </CardActions>
               </Card>
             </Grid>
@@ -40,7 +37,7 @@ export default function Main() {
               <Card>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Setpper in router
+                    Progress by router
                   </Typography>
                   <Typography>It display progress through linear indicators.</Typography>
                 </CardContent>
@@ -55,9 +52,9 @@ export default function Main() {
               <Card>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Persistence Wizard
+                    No fancy libraries
                   </Typography>
-                  <Typography>It provides a wizard-like workflow and could be restored.</Typography>
+                  <Typography>It provides a wizard-like workflow without libraries.</Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
