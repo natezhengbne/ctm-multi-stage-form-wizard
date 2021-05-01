@@ -80,6 +80,7 @@ export default function StepperDialog() {
           classes={{
             paper: classes.dialogPaper,
           }}
+          keepMounted={false}
         >
           <DialogTitleWithCloseIcon title="Compare" handleClose={handleClose} />
           <StepperControl />

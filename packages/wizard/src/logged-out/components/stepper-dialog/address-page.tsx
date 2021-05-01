@@ -1,4 +1,4 @@
-import { Button, DialogActions, DialogContent, FormControl, Grid, TextField } from "@material-ui/core";
+import { Button, DialogActions, DialogContent, FormControl, Grid, TextField, Typography } from "@material-ui/core";
 import React, { ChangeEvent, useContext, useEffect, useState } from "react";
 import { StepperContext } from ".";
 import { useFormik } from "formik";
@@ -12,6 +12,7 @@ import { isBlank } from "@ctm-multi-stage-wizard/common/functions/value-utils";
 export default function AddressPage() {
   const stepper = useContext(StepperContext);
   const [suburbOptions, setSuburbOptions] = useState<Suburb[]>();
+  const [streetTypeSelected, setStreetTypeSelected] = useState<string>(stepper?.compareForm?.address?.streetType ?? "");
   const [suburbSelected, setSuburbselected] = useState<Suburb>({
     display: {
       text: stepper?.compareForm?.address?.suburb,
@@ -23,7 +24,12 @@ export default function AddressPage() {
   const [suburbInput, setSuburbInput] = useState<string>();
 
   const validationSchema = yup.object().shape({
-    streetNumber: yup.string().required("Required"),
+    streetNumber: yup
+      .string()
+      .required("Required")
+      .matches(/^[0-9]*[1-9][0-9]*$/, {
+        message: "Input a valid street number",
+      }),
     streetName: yup.string().required("Required"),
     streetType: yup.string().required("Required"),
     suburb: yup.string().required("Required"),
@@ -70,6 +76,9 @@ export default function AddressPage() {
   return (
     <>
       <DialogContent>
+        <Typography variant="h6" gutterBottom>
+          Address information
+        </Typography>
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <TextField
@@ -104,8 +113,12 @@ export default function AddressPage() {
           <Grid item xs={6}>
             <FormControl fullWidth>
               <Autocomplete
+                id="controlled-street_type"
                 disableClearable
-                getOptionSelected={(option, value) => option === value}
+                getOptionSelected={(option, value) => {
+                  return value === "" || option === value;
+                }}
+                getOptionLabel={(option) => option ?? ""}
                 renderInput={(params) => (
                   <TextField
                     {...params}
@@ -116,8 +129,14 @@ export default function AddressPage() {
                   />
                 )}
                 options={streetTypes}
-                value={stepper?.compareForm?.address?.streetType}
-                onChange={(event, value: string | undefined, reason) => handleChange(value, "streetType")}
+                value={streetTypeSelected}
+                onChange={(event, value: string | null, reason) => {
+                  console.log(reason);
+                  if (value) {
+                    setStreetTypeSelected(value);
+                    handleChange(value, "streetType");
+                  }
+                }}
               />
             </FormControl>
           </Grid>

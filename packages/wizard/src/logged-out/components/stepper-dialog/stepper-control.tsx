@@ -2,7 +2,7 @@ import { Step, StepLabel, Stepper } from "@material-ui/core";
 import React, { useContext } from "react";
 import { StepperContext } from ".";
 import AddressPage from "./address-page";
-import ConfirmPage from "./confirm-page";
+import SummaryPage from "./summary-page";
 import PersonalPage from "./personal-page";
 
 export default function StepperControl() {
@@ -22,7 +22,7 @@ export default function StepperControl() {
     },
     {
       label: "Confirm",
-      page: <ConfirmPage />,
+      page: <SummaryPage />,
     },
   ];
 

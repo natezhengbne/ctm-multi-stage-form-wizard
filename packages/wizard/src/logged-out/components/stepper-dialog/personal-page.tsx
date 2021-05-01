@@ -1,4 +1,4 @@
-import { Button, DialogActions, DialogContent, FormControl, Grid, TextField } from "@material-ui/core";
+import { Button, DialogActions, DialogContent, FormControl, Grid, TextField, Typography } from "@material-ui/core";
 import { useFormik } from "formik";
 import React, { useContext, useState } from "react";
 import { StepperContext } from ".";
@@ -36,8 +36,7 @@ export default function PersonalPage() {
   });
 
   function handleNext() {
-    stepper.next();
-    // formik.submitForm();
+    formik.submitForm();
   }
 
   const handleChange = (value: any, name: string) => {
@@ -47,6 +46,9 @@ export default function PersonalPage() {
   return (
     <>
       <DialogContent>
+        <Typography variant="h6" gutterBottom>
+          Personal information
+        </Typography>
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <TextField
