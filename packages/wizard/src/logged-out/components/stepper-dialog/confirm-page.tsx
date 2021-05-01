@@ -1,4 +1,4 @@
-import { Button, DialogActions } from "@material-ui/core";
+import { Button, DialogActions, DialogContent } from "@material-ui/core";
 import React, { useContext, useState } from "react";
 import { StepperContext } from ".";
 
@@ -13,6 +13,7 @@ export default function ConfirmPage() {
 
   return (
     <>
+      <DialogContent></DialogContent>
       <DialogActions>
         <Button color="primary" onClick={handleBack}>
           Back
