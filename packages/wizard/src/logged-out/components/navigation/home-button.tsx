@@ -1,5 +1,5 @@
 import { Button, createStyles, makeStyles, Theme } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import React from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -16,15 +16,17 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function HomeButton() {
   const classes = useStyles();
-  function handleClick() {}
+  let history = useHistory();
 
   return (
     <>
-      <Link to={"home"} onClick={handleClick} className={classes.noDecoration}>
-        <Button color="secondary" size="large" className={classes.menuButtonText}>
-          Home
-        </Button>
-      </Link>
+      {history.location.pathname === "/" ? null : (
+        <Link to={"/"} className={classes.noDecoration}>
+          <Button color="secondary" size="large" className={classes.menuButtonText}>
+            Home
+          </Button>
+        </Link>
+      )}
     </>
   );
 }

@@ -1,9 +1,12 @@
 import { Box, Button, Card, CardActions, CardContent, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import NavBar from "./navigation/nav-bar";
 import StepperDialog from "./stepper-dialog";
 
 export default function Main() {
+  let history = useHistory();
+
   return (
     <>
       <NavBar />
@@ -57,7 +60,13 @@ export default function Main() {
                   <Typography>It provides a wizard-like workflow without libraries.</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={() => {
+                      history.push("/noFancy");
+                    }}
+                  >
                     View
                   </Button>
                 </CardActions>
