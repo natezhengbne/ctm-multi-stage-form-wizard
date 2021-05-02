@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: 'customer.[hash].js',
+    filename: 'wizard.[hash].js',
     path: path.resolve(__dirname, "dist"),
     publicPath: '/'
   },
@@ -21,8 +21,8 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ["css-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

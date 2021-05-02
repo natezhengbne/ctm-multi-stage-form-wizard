@@ -1,0 +1,12 @@
+.StepperActions-root {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 48px;
+}
+
+.StepperForm-root {
+  padding: 36px;
+  height: 100%;
+}
