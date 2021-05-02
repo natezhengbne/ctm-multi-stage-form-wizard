@@ -5,6 +5,7 @@ import StepAddress from "./step-address";
 import StepPersonal from "./step-personal";
 import StepSummary from "./step-summary";
 import "./layout.css";
+import StepIndicator from "./step-indicator";
 
 export const MAX_STEP = 3;
 export const START_STEP = 1;
@@ -33,6 +34,7 @@ export default function NoFancyLibrariesPage() {
   return (
     <>
       <NavBar />
+      <StepIndicator value={(activeStep / MAX_STEP) * 100} />
       <StepPersonal step={1} activeStep={activeStep} onNext={handNext} onPrev={handlePrev} value={compareForm} />
       <StepAddress step={2} activeStep={activeStep} onNext={handNext} onPrev={handlePrev} value={compareForm} />
       <StepSummary step={3} activeStep={activeStep} onPrev={handlePrev} value={compareForm} />
