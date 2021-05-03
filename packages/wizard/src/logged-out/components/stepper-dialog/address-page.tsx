@@ -80,7 +80,7 @@ export default function AddressPage() {
           Address information
         </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <TextField
               required
               label={"Street Number"}
@@ -110,7 +110,7 @@ export default function AddressPage() {
               }}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={2}>
             <FormControl fullWidth>
               <Autocomplete
                 id="controlled-street_type"
@@ -156,7 +156,7 @@ export default function AddressPage() {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    label={"Suburb"}
+                    label={"Search Suburb"}
                     required
                     error={Boolean(formik.errors.suburb) && formik.submitCount > 0}
                     helperText={formik.submitCount > 0 ? formik.errors.suburb : undefined}
@@ -185,7 +185,6 @@ export default function AddressPage() {
               />
             </FormControl>
           </Grid>
-          <Grid item xs={6}></Grid>
           <Grid item xs={6}>
             <TextField
               required

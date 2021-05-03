@@ -15,7 +15,7 @@ export default function StepPersonal(props: Props) {
   const [email, setEmail] = useState<string | undefined>();
   const [phone, setPhone] = useState<string | undefined>();
 
-  if (props.activeStep !== props.step) {
+  if (props.activeStep !== props.step) {    
     return null;
   }
 

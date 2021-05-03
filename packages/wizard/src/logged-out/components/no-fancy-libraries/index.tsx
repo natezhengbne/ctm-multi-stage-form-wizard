@@ -14,8 +14,6 @@ export default function NoFancyLibrariesPage() {
   const [activeStep, setActiveStep] = useState(START_STEP);
   const [compareForm, setCompareForm] = useState<CompareForm>();
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {}
-
   function handNext(value: CompareForm) {
     if (activeStep === MAX_STEP) {
       return;

@@ -29,7 +29,7 @@ export default function Main() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Stepper
                   </Typography>
-                  <Typography>It display progress through a sequence of numbered.</Typography>
+                  <Typography>It display progress through a sequence of numbered by material-ui.com</Typography>
                 </CardContent>
                 <CardActions>
                   <StepperDialog />
@@ -57,7 +57,9 @@ export default function Main() {
                   <Typography gutterBottom variant="h5" component="h2">
                     No fancy libraries
                   </Typography>
-                  <Typography>It provides a wizard-like workflow without libraries.</Typography>
+                  <Typography>
+                    It provides a wizard-like workflow by html tag and parts of styles uses Bootstrap.
+                  </Typography>
                 </CardContent>
                 <CardActions>
                   <Button

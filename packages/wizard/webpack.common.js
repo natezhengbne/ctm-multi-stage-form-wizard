@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: 'wizard.[hash].js',
+    filename: 'wizard.[fullhash].js',
     path: path.resolve(__dirname, "dist"),
     publicPath: '/'
   },

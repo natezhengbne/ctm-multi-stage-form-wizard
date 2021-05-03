@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The page of step-personal renders renders correctly 1`] = `
+<Fragment>
+  <form
+    id="personal-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="StepperForm-root container-sm"
+    >
+      <h1>
+        Personal
+      </h1>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="firstName"
+        >
+          First Name *
+        </label>
+        <input
+          className="form-control"
+          id="firstName"
+          maxLength={16}
+          name="firstName"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value=""
+        />
+        <div
+          className="invalid-feedback"
+        >
+          Please input your first name.
+        </div>
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="lastName"
+        >
+          Last Name *
+        </label>
+        <input
+          className="form-control"
+          id="lastName"
+          maxLength={16}
+          name="lastName"
+          onChange={[Function]}
+          required={true}
+          value=""
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="email"
+        >
+          Email *
+        </label>
+        <input
+          className="form-control"
+          id="email"
+          maxLength={20}
+          name="email"
+          onChange={[Function]}
+          required={true}
+          type="email"
+          value=""
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="phone"
+        >
+          Phone
+        </label>
+        <input
+          className="form-control"
+          id="phone"
+          maxLength={20}
+          name="phone"
+          onChange={[Function]}
+          pattern="^(\\\\+?\\\\(61\\\\)|\\\\(\\\\+?61\\\\)|\\\\+?61|\\\\(0[1-9]\\\\)|0[1-9])?( ?-?[0-9]){7,9}$"
+          title="Please input valid phone number"
+          value=""
+        />
+      </div>
+      <div
+        className="StepperActions-root"
+      >
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </form>
+</Fragment>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The entry point of no fancy libraries stepper renders renders correctly 1`] = `
+<Fragment>
+  <Memo(NavBar) />
+  <StepIndicator
+    value={33.33333333333333}
+  />
+  <StepPersonal
+    activeStep={1}
+    onNext={[Function]}
+    onPrev={[Function]}
+    step={1}
+  />
+  <StepAddress
+    activeStep={1}
+    onNext={[Function]}
+    onPrev={[Function]}
+    step={2}
+  />
+  <StepSummary
+    activeStep={1}
+    onPrev={[Function]}
+    step={3}
+  />
+</Fragment>
+`;

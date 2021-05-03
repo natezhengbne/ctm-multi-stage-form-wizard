@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The page of step-address renders renders correctly 1`] = `
+<Fragment>
+  <form
+    id="address-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="StepperForm-root container-sm"
+    >
+      <h1>
+        Address
+      </h1>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="streetNumber"
+        >
+          Street Number *
+        </label>
+        <input
+          className="form-control"
+          id="streetNumber"
+          max="10000"
+          maxLength={16}
+          min="1"
+          name="streetNumber"
+          onChange={[Function]}
+          required={true}
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="streetName"
+        >
+          Street Name *
+        </label>
+        <input
+          className="form-control"
+          id="streetName"
+          maxLength={16}
+          name="streetName"
+          onChange={[Function]}
+          required={true}
+          value=""
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+        >
+          Street Type *
+        </label>
+        <select
+          className="form-select form-control"
+          id="streetType"
+          name="streetType"
+          onChange={[Function]}
+          required={true}
+          value=""
+        >
+          <option
+            disabled={true}
+            key="Choose Street Type"
+            value=""
+          >
+            Choose Street Type
+          </option>
+          <option
+            key="CI"
+            value="CI"
+          >
+            CI
+          </option>
+          <option
+            key="Ct"
+            value="Ct"
+          >
+            Ct
+          </option>
+          <option
+            key="St"
+            value="St"
+          >
+            St
+          </option>
+          <option
+            key="PI"
+            value="PI"
+          >
+            PI
+          </option>
+          <option
+            key="Ave"
+            value="Ave"
+          >
+            Ave
+          </option>
+        </select>
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="suburb"
+        >
+          Suburb *
+        </label>
+        <input
+          className="form-control"
+          id="suburb"
+          maxLength={30}
+          name="suburb"
+          onChange={[Function]}
+          required={true}
+          value=""
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="postcode"
+        >
+          Postcode *
+        </label>
+        <input
+          className="form-control"
+          id="postcode"
+          maxLength={20}
+          name="postcode"
+          onChange={[Function]}
+          pattern="^(0[8][0-9]{2})|([1-7][0-9]{3})$"
+          required={true}
+          title="Postcode: 0800-7999"
+          value=""
+        />
+      </div>
+      <div
+        className="StepperActions-root"
+      >
+        <button
+          className="btn btn-secondary m-3"
+          onClick={[Function]}
+        >
+          Back
+        </button>
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </form>
+</Fragment>
+`;

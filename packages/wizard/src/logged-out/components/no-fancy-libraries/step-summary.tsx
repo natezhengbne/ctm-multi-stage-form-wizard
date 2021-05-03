@@ -1,5 +1,5 @@
 import { CompareForm } from "@ctm-multi-stage-wizard/common/data-type/compare-form";
-import React, { useState } from "react";
+import React from "react";
 
 type Props = {
   activeStep: number;
@@ -15,6 +15,7 @@ export default function StepSummary(props: Props) {
 
   function save() {
     console.log(props.value);
+    alert(JSON.stringify(props.value));
   }
 
   function prev() {
