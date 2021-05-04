@@ -16,38 +16,23 @@ export default function Main() {
             Multi Stage Form Wizard
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            There are three difference wizards implemention.
+            There are two difference wizards implemention.
           </Typography>
         </Container>
       </Box>
       <Box paddingTop={8} paddingBottom={8}>
         <Container maxWidth="md">
-          <Grid container spacing={4}>
+          <Grid container spacing={4} justify="space-evenly">
             <Grid item xs={12} sm={6} md={4}>
               <Card>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     Stepper
                   </Typography>
-                  <Typography>It display progress through a sequence of numbered by material-ui.com</Typography>
+                  <Typography>It display progress through a sequence of numbered. Used material-ui</Typography>
                 </CardContent>
                 <CardActions>
                   <StepperDialog />
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Progress by router
-                  </Typography>
-                  <Typography>It display progress through linear indicators.</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
                 </CardActions>
               </Card>
             </Grid>

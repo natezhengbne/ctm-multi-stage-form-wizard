@@ -28,7 +28,7 @@ function NavBar() {
         <Toolbar className={classes.toolbar}>
           <div>
             <Typography variant="h6" color="primary">
-              Compare the market
+              CTM test
             </Typography>
           </div>
           <div>
