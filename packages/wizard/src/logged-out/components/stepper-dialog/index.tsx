@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export type StepperContext = {
+export type StepperContextType = {
   activeStep: number;
   next: () => void;
   back: () => void;
@@ -19,7 +19,7 @@ export type StepperContext = {
   setCompareForm: (compareForm: CompareForm) => void;
 };
 
-const DEFAULT_STEPPER_VALUE: StepperContext = {
+const DEFAULT_STEPPER_VALUE: StepperContextType = {
   activeStep: 0,
   next: () => {},
   back: () => {},
@@ -29,9 +29,9 @@ const DEFAULT_STEPPER_VALUE: StepperContext = {
 
 const MAX_STEP = 3;
 
-export const StepperContext = createContext<StepperContext>(DEFAULT_STEPPER_VALUE);
+export const StepperContext = createContext<StepperContextType>(DEFAULT_STEPPER_VALUE);
 
-export const useStepperContext = (): StepperContext => {
+export const useStepperContext = (): StepperContextType => {
   const [activeStep, setActiveStep] = useState(0);
   const [compareForm, setCompareForm] = useState({});
 

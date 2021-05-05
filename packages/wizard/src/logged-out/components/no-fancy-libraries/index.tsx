@@ -23,7 +23,7 @@ export default function NoFancyLibrariesPage() {
   }
 
   function handlePrev() {
-    if (activeStep === 1) {
+    if (activeStep === START_STEP) {
       return;
     }
     setActiveStep(activeStep - 1);

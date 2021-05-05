@@ -28,7 +28,7 @@ export default function StepperControl() {
 
   const stepNodes = stepsPage.map((step, index) => {
     return (
-      <Step key={`${step.label}` + `${index}`}>
+      <Step key={`${step.label}`}>
         <StepLabel>{step.label}</StepLabel>
       </Step>
     );

@@ -31,11 +31,11 @@ export default function StepAddress(props: Props) {
       return;
     }
     const address: Address = {
-      streetNumber: streetNumber,
-      streetName: streetName,
-      streetType: streetType,
-      suburb: suburb,
-      postcode: postcode,
+      streetNumber,
+      streetName,
+      streetType,
+      suburb,
+      postcode,
     };
 
     props.onNext({

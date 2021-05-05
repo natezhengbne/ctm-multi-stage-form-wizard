@@ -20,6 +20,7 @@ export default function StepPersonal(props: Props) {
   }
 
   function next(event: React.FormEvent<HTMLFormElement>) {
+    // todo handle else
     if (firstName === undefined || lastName === undefined || email === undefined) {
       return;
     }

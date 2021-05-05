@@ -5,7 +5,9 @@ import { StepperContext } from ".";
 export default function SummaryPage() {
   const stepper = useContext(StepperContext);
 
-  function handleSave() {}
+  function handleSave() {
+    alert(JSON.stringify(stepper.compareForm));
+  }
 
   function handleBack() {
     stepper.back();
