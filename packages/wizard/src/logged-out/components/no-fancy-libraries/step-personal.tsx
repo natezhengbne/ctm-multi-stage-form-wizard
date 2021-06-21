@@ -1,5 +1,6 @@
 import { CompareForm, Personal } from "@ctm-multi-stage-wizard/common/data-type/compare-form";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { InputContext } from "./reducer-store";
 
 type Props = {
   activeStep: number;
@@ -15,7 +16,9 @@ export default function StepPersonal(props: Props) {
   const [email, setEmail] = useState<string | undefined>();
   const [phone, setPhone] = useState<string | undefined>();
 
-  if (props.activeStep !== props.step) {    
+  const context = useContext(InputContext);
+
+  if (props.activeStep !== props.step) {
     return null;
   }
 
@@ -44,7 +47,7 @@ export default function StepPersonal(props: Props) {
           <h1>Personal</h1>
           <div className="mb-3">
             <label htmlFor="firstName" className="form-label">
-              First Name *
+              {`value = ${context.state.value}`}
             </label>
             <input
               className="form-control"
@@ -56,6 +59,10 @@ export default function StepPersonal(props: Props) {
               maxLength={16}
               onChange={(event) => {
                 setFirstName(event.target.value);
+                context.dispatch({
+                  type: "INIT",
+                  payload: event.target.value,
+                });
               }}
             />
             <div className="invalid-feedback">Please input your first name.</div>
