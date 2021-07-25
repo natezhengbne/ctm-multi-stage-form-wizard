@@ -3,12 +3,21 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import NavBar from "./navigation/nav-bar";
 import StepperDialog from "./stepper-dialog";
+import TestByMySelf from "./stepper-dialog/my";
+import TestByReactSlick from "./stepper-dialog/react-slick";
+import TestByReackSwipeable from "./stepper-dialog/react-swipeable";
+import TestByReackSwipeableViews from "./stepper-dialog/react-swipeable-views";
+import TestByReackUseGesture from "./stepper-dialog/react-use-gesture";
 
 export default function Main() {
   let history = useHistory();
 
   return (
     <>
+      {/* <TestByReactSlick /> */}
+      {/* <TestByReackUseGesture /> */}
+      {/* <TestByReackSwipeableViews /> */}
+      <TestByMySelf />
       <NavBar />
       <Box paddingTop={8} paddingBottom={6}>
         <Container maxWidth="sm">
